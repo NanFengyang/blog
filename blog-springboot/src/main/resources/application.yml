@@ -88,11 +88,11 @@ upload:
     # 本地文件存储路径
     path: /usr/local/upload/
   oss:
-    url: http://treeting.oss-cn-beijing.aliyuncs.com/
-    endpoint: oss-cn-beijing.aliyuncs.com
-    accessKeyId: LTAI5tK9aUfNoyBu7eKqmpoJ
-    accessKeySecret: foBThhV8zaijMjxeyDYVm3GZVnGZLL
-    bucketName: treeting
+    url: 
+    endpoint: 
+    accessKeyId: 
+    accessKeySecret: 
+    bucketName: 
 
 # 网站前台域名（邮件通知用）  www.treeting.top
 website:
@@ -105,11 +105,11 @@ qq:
   user-info-url: https://graph.qq.com/user/get_user_info?openid={openid}&access_token={access_token}&oauth_consumer_key={oauth_consumer_key}
 
 github:
-  client-id: d5f1149aba97f42ed60c
-  client-secret: 30d883a439cdeec2034f8bb680443145cdaa459f
-  redirect-url: http://139.224.104.233/oauth/login/github
-  access-token-url: https://github.com/login/oauth/access_token
-  user-info-url: https://api.github.com/user
+  client-id: 
+  client-secret: 
+  redirect-url: 
+  access-token-url: 
+  user-info-url: 
 
 weibo:
   app-id: 微博APPID
