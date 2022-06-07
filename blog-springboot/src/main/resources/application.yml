@@ -10,9 +10,9 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://139.224.104.233:8826/blog?serverTimezone=Asia/Shanghai&allowMultiQueries=true
-    username: root
-    password: root
+    url: jdbc:mysql://你的ip:3306/blog?serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: MYSQL用户名
+    password: MYSQL密码
     hikari:
       minimum-idle: 5
       # 空闲连接存活最大时间，默认600000（10分钟）
@@ -30,15 +30,15 @@ spring:
       connection-test-query: SELECT 1
   # redis配置
   redis:
-    host: 139.224.104.233
+    host: 你的ip
     port: 6379
-    #password: Redis密码
+    password: Redis密码
   # mq配置
   rabbitmq:
-    host: 139.224.104.233
+    host: 你的ip
     port: 5672
-    username: root
-    password: root
+    username: rabbitmq用户名
+    password: rabbitmq密码
     listener:
       simple:
         retry:
@@ -52,8 +52,8 @@ spring:
   # 邮箱配置
   mail:
     host: smtp.qq.com
-    username: shijie97@qq.com
-    password: hdduyrllmsiibfhj
+    username: 邮箱用户名
+    password: 邮箱授权码
     default-encoding: UTF-8
     port: 587
     properties:
@@ -79,37 +79,31 @@ mybatis-plus:
 search:
   mode: mysql
 
+
 # 上传模式 可选 oss或local  （http://和最后的/一定不能去！！！）
 upload:
-  mode: oss
+  mode: local
   local:
     # nginx映射本地文件路径，无域名则为 ip:83
-    url: http://www.static.treeting.top/
+    url: http://你的文件上传子域名/
     # 本地文件存储路径
     path: /usr/local/upload/
   oss:
-    url: 
-    endpoint: 
-    accessKeyId: 
-    accessKeySecret: 
-    bucketName: 
+    url: http://Bucket域名/
+    endpoint: OSS配置endpoint
+    accessKeyId: OSS配置accessKeyId
+    accessKeySecret: OSS配置accessKeySecret
+    bucketName: OSS配置bucketName
 
-# 网站前台域名（邮件通知用）  www.treeting.top
+# 网站前台域名（邮件通知用）
 website:
-  url: http://139.224.104.233
+  url: http://你的主域名或ip
 
 #第三方配置信息
 qq:
   app-id: QQ APPID
   check-token-url: https://graph.qq.com/oauth2.0/me?access_token={access_token}
   user-info-url: https://graph.qq.com/user/get_user_info?openid={openid}&access_token={access_token}&oauth_consumer_key={oauth_consumer_key}
-
-github:
-  client-id: 
-  client-secret: 
-  redirect-url: 
-  access-token-url: 
-  user-info-url: 
 
 weibo:
   app-id: 微博APPID
